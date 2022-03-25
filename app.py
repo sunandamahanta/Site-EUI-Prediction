@@ -46,7 +46,7 @@ def main():
         facility_type = ordinal_encoder(facility_type, facility_type_options)
         
         data = np.array([STATE_FACTOR,building_class,facility_type,year_built,energy_star_rating,building_area,floor_area,avg_temp]).reshape(1,-1)
-        pred = get_prediction(data=data, model=model)
+        pred = get_prediction(data=Data, model=model)
 
         st.write(f"The predicted severity is:  {pred[0]}")
 
